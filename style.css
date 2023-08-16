@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #c4e4ff; */
+    background: url("./z.jpg") 80% center ;
+}
+
+/* Nav Area */
+
+nav {
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 3px 0px 0px #59b9ed;
+    justify-content: center;
+    background: linear-gradient(45deg, #2555cb, #f27fff);
+}
+
+.Heading {
+    font-size: 2rem;
+    font-family: cursive;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 2%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    margin: 2rem 0;
+
+}
+
+.Calculator {
+    width: 400px;
+    height: fit-content;
+    background: linear-gradient(to bottom, #7ae1ff, #0074cb);
+    border: 1px solid #96d2ff;
+    border-radius: 20px;
+}
+
+/* Result Area */
+
+.Result-Area {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    height: 20vh;
+    overflow: hidden;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-bottom: 1px solid #4739fe;
+}
+
+.Answer {
+    display: flex;
+    margin: 5% 14%;
+    color: blue;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Input Area */
+
+.Input-Area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+
+.Row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Input-Circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 16%;
+    margin: 2%;
+    cursor: pointer;
+    border-radius: 50px;
+    background: rgb(102, 102, 102);
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Input-Circle:hover {
+    background: rgb(47, 45, 45);
+}
+
+.Input-Circle-Big {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    cursor: pointer;
+    width: 36%;
+    margin: 2%;
+    border-radius: 50px;
+    background: rgb(118, 118, 118);
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Input-Circle-Big:hover {
+    background: rgb(90, 89, 89);
+}
+
+.Top-3 {
+    background: rgb(61, 158, 255);
+}
+
+.Top-3:hover {
+    background: rgb(12, 122, 232);
+}
+
+.Last-Col {
+    background: rgb(63, 63, 239);
+}
+
+.Last-Col:hover {
+    background: rgb(19, 19, 207);
+
+}
+
+/* Some Decoration  */
+
+.P-Col {
+    color: #76d4fc !important;
+}
+
+/* Responsive  */
+
+@media (max-width:550px) {
+
+    .Container{
+        height: 75vh;
+        margin: 2rem 0;
+    }
+
+    .Heading {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:420px) {
+    .Calculator {
+        width: 300px;
+        height: fit-content;
+    }
+
+    .Input-Circle,
+    .Input-Circle-Big {
+        height: 45px;
+    }
+}
+
+@media (max-width:350px) {
+    .Calculator {
+        width: 250px;
+        height: fit-content;
+    }
+
+    .D-Col {
+        width: 0;
+        visibility: hidden;
+    }
+
+    .P-Col {
+        width: 0;
+        visibility: hidden;
+    }
+
+    nav {
+        overflow: hidden;
+    }
+
+    .Input-Circle {
+        width: 20%;
+    }
+
+    .Input-Circle-Big {
+        height: 45px;
+        width: 40%;
+    }
+}
