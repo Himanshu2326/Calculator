@@ -11,6 +11,28 @@ body {
     background: url("./z.jpg") 80% center ;
 }
 
+.RShowArea{
+    margin: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Eql{
+    font-size: 1.5rem;
+    color: blue;
+}
+.Hide{
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.Show{
+    display: flex;
+    visibility: visible;
+
+}
 /* Nav Area */
 
 nav {
@@ -54,7 +76,7 @@ nav {
 
 .Result-Area {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     display: flex;
     height: 20vh;
     overflow: hidden;
@@ -65,7 +87,7 @@ nav {
 
 .Answer {
     display: flex;
-    margin: 5% 14%;
+    margin: 0% 14%;
     color: blue;
     font-weight: bold;
     font-size: 2rem;

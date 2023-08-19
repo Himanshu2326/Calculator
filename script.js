@@ -26,11 +26,11 @@ Op.forEach((element, i) => {
     })
 })
 
-Input_Circle.forEach((e)=>{
-    e.addEventListener('click',()=>{
-        e.computedStyleMap.scale="0"
+Input_Circle.forEach((e) => {
+    e.addEventListener('click', () => {
+        e.computedStyleMap.scale = "0"
     })
-    
+
 })
 
 
@@ -45,50 +45,65 @@ Array.from(Num).forEach((element, i) => {
 })
 
 
+let Hide = document.querySelector('.Hide');
+let Show = document.querySelector('.Show');
+let Eql = document.querySelector('.Eql')
+
 // Keyborad Input:--
 
-document.addEventListener('keydown',(e)=>{
+document.addEventListener('keydown', (e) => {
 
-    if((e.key>=0 && e.key <=9)||(e.key == "/" || e.key == "*" || e.key == "+" || e.key == "-" || e.key == "%" || e.key == "."    )){
+    if ((e.key >= 0 && e.key <= 9) || (e.key == "/" || e.key == "*" || e.key == "+" || e.key == "-" || e.key == "%" || e.key == ".")) {
         Answer.innerHTML = Answer.innerHTML + e.key;
         audio.play();
     }
-   
-    if(e.key == "Enter"){
+
+    if (e.key == "Enter") {
         let Ans = eval(Answer.innerHTML);
-        Answer.innerHTML = "="+ Ans;
+        Answer.innerHTML = Ans;
+        Eql.classList.add('Show');
+        Eql.classList.remove('Hide');
         audio.play();
     }
 
-    if(e.key == "Backspace"){
-        Answer.innerHTML = Answer.innerHTML.slice(0,-1)
+    if (e.key == "Backspace") {
+        Answer.innerHTML = Answer.innerHTML.slice(0, -1)
+        Eql.classList.remove('Show');
+        Eql.classList.add('Hide');
         audio.play();
     }
 
 })
-
-
 
 
 // Answer Calculation:-
 
 let EqualTo = document.getElementsByClassName("EqualTo")[0];
 EqualTo.addEventListener("click", () => {
-    let FinalValue = eval(Answer.innerText);
+    let FinalValue = Answer.innerText;
+    Eql.classList.add('Show');
+    Eql.classList.remove('Hide');
     audio.play();
-    Answer.innerText = "=" + FinalValue
+    Answer.innerText = eval(FinalValue)
 })
+
+
+
 // AC Button :-
 
 AC.addEventListener("click", () => {
     Answer.innerText = ""
     audio.play();
+    Eql.classList.remove('Show');
+    Eql.classList.add('Hide');
 })
 
 // Delete Function:-
 
 let Delete = document.getElementsByClassName("Delete")[0];
 Delete.addEventListener("click", () => {
+    Eql.classList.remove('Show');
+    Eql.classList.add('Hide');
     Answer.innerText = Answer.innerText.toString().slice(0, -1);
     audio.play();
 })
