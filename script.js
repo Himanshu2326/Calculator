@@ -81,10 +81,10 @@ document.addEventListener('keydown', (e) => {
 let EqualTo = document.getElementsByClassName("EqualTo")[0];
 EqualTo.addEventListener("click", () => {
     let FinalValue = Answer.innerText;
-    Eql.classList.add('Show');
-    Eql.classList.remove('Hide');
     audio.play();
     Answer.innerText = eval(FinalValue)
+    Eql.classList.add('Show');
+    Eql.classList.remove('Hide');
 })
 
 
